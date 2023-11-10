@@ -2,32 +2,32 @@ let team = [
     {
         name: "Wayne Barnett",
         role: "Founder & CEO",
-        picture: "wayne-barnett-founder-ceo.jpg"
+        imgPath: "wayne-barnett-founder-ceo.jpg"
     },
     {
         name: "Angela Caroll",
         role: "Chief Editor",
-        picture: "angela-caroll-chief-editor.jpg"
+        imgPath: "angela-caroll-chief-editor.jpg"
     },
     {
         name: "Walter Gordon",
         role: "Office Manager",
-        picture: "walter-gordon-office-manager.jpg"
+        imgPath: "walter-gordon-office-manager.jpg"
     },
     {
         name: "Angela Lopez",
         role: "Social Media Manager",
-        picture: "angela-lopez-social-media-manager.jpg"
+        imgPath: "angela-lopez-social-media-manager.jpg"
     },
     {
         name: "Scott Estrada",
         role: "Developer",
-        picture: "scott-estrada-developer.jpg"
+        imgPath: "scott-estrada-developer.jpg"
     },
     {
         name: "Barbara Ramos",
         role: "Graphic Designer",
-        picture: "barbara-ramos-graphic-designer.jpg"
+        imgPath: "barbara-ramos-graphic-designer.jpg"
     }
     
 ]
@@ -35,16 +35,18 @@ let team = [
 
 
 for (let i = 0; i < team.length; i++) {
-    
 
-     console.log(team[i].name,` `, team[i].role,` `, team[i].picture);
+    const pHtml =  document.createElement("p");
+    document.getElementById("team").appendChild(pHtml).innerHTML = `${team[i].name} - ${team[i].role} - ${team[i].imgPath}`;
+
+
+
+     /* console.log(teamHtml); */
 
     /*     for(let key in team[i]) {
             console.log( key, team[i][key] );
         } */
-        
 
-    
     
 }
 
