@@ -36,8 +36,11 @@ let team = [
 
 for (let i = 0; i < team.length; i++) {
 
+    const imgHtml = document.createElement("img");
+    imgHtml.setAttribute("src", team[i].imgPath);
+    document.getElementById("team").appendChild(imgHtml).innerHTML = `${team[i].imgPath}`
     const pHtml =  document.createElement("p");
-    document.getElementById("team").appendChild(pHtml).innerHTML = `${team[i].name} - ${team[i].role} - ${team[i].imgPath}`;
+    document.getElementById("team").appendChild(pHtml).innerHTML = `${team[i].name} - ${team[i].role}`;
 
 
 
